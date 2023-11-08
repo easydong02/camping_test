@@ -12,18 +12,10 @@ spring:
       ddl-auto: update
     properties:
       hibernate:
-        sql_show: true
+        dialect: org.hibernate.dialect.MySQL8Dialect
         format_sql: true
         default_batch_fetch_size: 100
-        use_sql_comments: true
   logging:
     level:
-      org:
-        hibernate:
-          SQL: debug
-          type:
-            descriptor:
-              sql: trace
-      #org.hibernate.SQL: debug
-
-      #org.hibernate.type: trace
+      org.hibernate.SQL: debug
+      # org.hibernate.type: trace
